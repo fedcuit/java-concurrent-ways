@@ -6,19 +6,12 @@ import java.util.concurrent.*;
 
 import static io.github.fedcuit.concurrent.dataprocess.CollectionUtil.longs;
 import static io.github.fedcuit.concurrent.dataprocess.CollectionUtil.splitData;
+import static io.github.fedcuit.concurrent.dataprocess.SingleDataProcessor.compute;
 
 /**
  * This class is used to demonstrate that how we split the data source and merge the results with Future(the old way before CompletableFuture and stream).
  */
-public class DataProcessorBasedFuture {
-
-    private static long compute(List<Long> seq) {
-        Long sum = 0L;
-        for (Long number : seq) {
-            sum += VerySlowService.timeConsumingOperation(number);
-        }
-        return sum;
-    }
+public class DataProcessorBasedOnFuture {
 
     public static long timeConsumingOperationOnLargeData() {
         return compute(longs(1_000));

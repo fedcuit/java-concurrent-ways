@@ -2,11 +2,11 @@ package io.github.fedcuit.concurrent.dataprocess;
 
 import org.junit.Test;
 
-import static io.github.fedcuit.concurrent.dataprocess.DataProcessorBasedFuture.timeConsumingOperationOnLargeData;
-import static io.github.fedcuit.concurrent.dataprocess.DataProcessorBasedFuture.timeConsumingOperationOnLargeDataParallelly;
+import static io.github.fedcuit.concurrent.dataprocess.DataProcessorBasedOnFuture.timeConsumingOperationOnLargeData;
+import static io.github.fedcuit.concurrent.dataprocess.DataProcessorBasedOnFuture.timeConsumingOperationOnLargeDataParallelly;
 import static org.fest.assertions.Assertions.assertThat;
 
-public class DataProcessorBasedFutureTest {
+public class DataProcessorBasedOnFutureTest {
 
     @Test
     public void shouldSumResultsFromService() throws Exception {
