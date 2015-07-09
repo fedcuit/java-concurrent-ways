@@ -24,4 +24,12 @@ public class CollectionUtil {
         }
         return partitions;
     }
+
+    static Long sum(List<Long> longs) {
+        Long sum = 0L;
+        for (Long aLong : longs) {
+            sum += aLong;
+        }
+        return sum;
+    }
 }
